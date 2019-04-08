@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>HRMS</title>
+      <!-- Icon attribution : https://www.flaticon.com/free-icon/avatar_147142 -->
+      <!-- Bootstrap core CSS -->
+      <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+      <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <!-- hrms-home.css is a very important CSS. Without it the body middle container will stock to the navigation bar.
+	  The footer will stick to the middle body, instead of staying fixed at the bottom of the page -->
+	  <link href="/css/hrms-home.css" rel="stylesheet">
+	  <!-- Custom styles for this template -->
+      <script src= "/vendor/jquery/jquery.min.js"></script>
+	  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	  <script src="/js/components.js"></script>
+	   <!-- Show DatePicker in forms : https://github.com/Pikaday/Pikaday -->
+	  <script src="/js/pikaday.js"></script>
+	  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	  <link href="/css/pikaday.css" rel="stylesheet"/>
+	  
+      <body>
+	  <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #dae0e5!important;">
+         <div class="container">
+            
+			<div class="row">
+			<div class="col-lg-3">
+				<a class="navbar-brand" href="#"><strong><font size="4">HRSolutions</font></strong></a>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-lg-3">
+				<a class="navbar-brand" href="#"><strong><font size="4">The ultimate stop to all your HR problems!</font></strong></a>
+			</div>
+			</div>
+			
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#" style="color: #212529">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item" >
+                     <a class="nav-link" href="#" style="color: #212529">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#" style="color: #212529">Services</a>
+                  </li>
+                  <li class="nav-item">
+                     <!-- <a class="nav-link" href="/pychat/logout/dumboo/">Logout</a> -->
+                     <!-- Drop down profile image with logout submenu. Reference : https://bootsnipp.com/snippets/Oqrd -->
+				<!-- Fill below div with React - start -->
+				<div id="nav-user-profile">
+				</div>
+                <!-- Fill below div with React - end -->
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+	  <script src="/js/userProfile.js"></script>
+	  <div class="container">
+	    
+         <div class="row" id="div1">
+            <div class="col-lg-3">
+               
+               <div class="list-group">
+				  <div style="padding: 10px; font-size: 15px">Employee actions</div>
+				  
+				  <div id ="employeeMenuItems">
+					 <!-- <div id="menuItemContainer">
+								<a href="#" class="list-group-item">Create Profile</a>
+								<a href="#" class="list-group-item">Edit Profile</a> 
+						   </div> -->
+				  </div>
+				  
+				  <div style="padding: 10px; font-size: 15px">Recruitement</div>
+				  
+				  <div id ="employeeREcruitemnetItems">
+					 <div id="menuItemContainer">
+								<a href="#" class="list-group-item">Registration</a>
+								<a href="#" class="list-group-item">Update applicant</a> 
+								<a href="#" class="list-group-item">Call for test</a>
+								<a href="#" class="list-group-item">Update result</a>
+				    </div>
+				  </div>
+                 
+               </div>
+              
+            </div>
+			
+            <!-- /.col-lg-3 -->
+            <div class="col-sm-9 col-md-9 col-lg-9 mx-auto" id="main-body">   
+					
+            <div id="msgDiv"></div>	
+            <div id="tableDiv">
+			    <!-- <table id="tableData" class="table table-hover"> 
+				</table> -->
+			</div>			
+			
+				  
+            <div>
+				<table class="table table-striped">
+				<tbody>
+				<tr id="empFormContainer">
+					<script src="/js/employeeItems.js"></script>
+					 <script>
+								//alert("huha");
+								var dobPicker = new Pikaday({ field: document.getElementById('dob') });
+								var dojPicker = new Pikaday({ field: document.getElementById('doj') });
+					 </script>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			
+            </div>
+			
+            <!-- /.row -->
+         </div>
+		 
+         <!-- /.container -->
+      </div>
+	  <footer class="py-5 bg-dark footerfixedbottom">
+         <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; https://binitabharati.wordpress.com/ 2019</p>
+         </div>
+      </footer>
+	  </body>  
+       
+   </body>
+</html>
